@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#btn{
+    width: 60px;
+    margin-bottom: 25px;
+    margin-right: 10px;
+    height: 60px;
+    background-color: blue;
+    border: none;
+    color: white;
+    border-radius: 50%;
+}
+
+.Card input{
+    width: 250px;
+    border: 1px solid gray;
+    font-size: 18px;
+    border-radius: 5px;
+    padding-left: 4px;
+    height: 30px;
+}
+
+#li button{
+    margin-left: 15px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+}
+
+.Card li{
+    list-style: none;
+    border: 1px solid gray;
+    padding: 5px;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.Card{
+    width: 450px;
+    box-shadow: 4px 4px 7px gray;
+    padding-top: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn2{
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(101, 101, 255);
+    color: white;
+    margin-left: 15px;
+}
