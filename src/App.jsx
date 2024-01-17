@@ -11,7 +11,6 @@ const App = () => {
   const [listening, setListening] = useState(false);
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
-  const [volume, SetVolume] = useState("");
 
   const handleVoiceEnd = () => {
     setListening(false);

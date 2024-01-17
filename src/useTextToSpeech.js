@@ -5,4 +5,6 @@ if (speechToText) {
     speechToText.speak(utter);
 }
 
-export default () => {  }
+export default () => { 
+    
+}
