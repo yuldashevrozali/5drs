@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+input[type = 'checkbox']{
+    width: 20px;
+    height: 20px;
+}
+
 #btn{
     width: 60px;
     margin-bottom: 25px;
@@ -15,7 +20,7 @@
     border-radius: 50%;
 }
 
-.Card input{
+.Card input[type = 'text']{
     width: 250px;
     border: 1px solid gray;
     font-size: 18px;

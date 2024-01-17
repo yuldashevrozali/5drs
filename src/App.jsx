@@ -11,11 +11,16 @@ const App = () => {
   const [listening, setListening] = useState(false);
   const [text, setText] = useState("");
   const [todos, setTodos] = useState([]);
+  const [checkbox, setcheckbox] = useState(false);
 
   const handleVoiceEnd = () => {
     setListening(false);
     handleAddTodo(); 
   };
+
+  function handlevalue(e){
+    setcheckbox(e.target.checked);
+  }
 
   const handleVoiceResult = (e) => {
     const transcript = e.results[0][0].transcript;
@@ -50,8 +55,13 @@ const App = () => {
   };
 
   const handleAddTextTodo = () => {
-    handleAddTodo();
+    if (text.toLowerCase() === 'delete') {
+      setText("");
+    } else {
+      handleAddTodo();
+    }
   };
+  
 
   const handleDelete = (id) => {
     setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
@@ -86,10 +96,11 @@ const App = () => {
           onChange={(e) => setText(e.target.value)}
           placeholder="Add new todo..."
         />
-        <button id="btn2" onClick={handleAddTextTodo}>Add Todo</button>
+        <button style={ text.length ? {background:'blue'}:{background:'#9896FF'}} id="btn2" onClick={handleAddTextTodo}>Add Todo</button>
         <ul>
           {todos.map((todo) => (
-            <li key={todo.id}>
+            <li style={checkbox ?{textDecoration:'underline'}:{textDecoration:'none'}} key={todo.id}>
+              <input onChange={handlevalue} type="checkbox" />
               {todo.text}
               <button onClick={() => handleDelete(todo.id)}>
                 <svg xmlns="http://www.w3.org/2000/svg" height="16" width="14" viewBox="0 0 448 512">
